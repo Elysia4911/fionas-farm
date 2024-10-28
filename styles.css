@@ -1,7 +1,406 @@
-/* -------------------- IMPORTED FONTS -------------------------------------- */
-/*-------------------- CSS REST ---------------------------------------------------*/
-/* -------------------- ROOT VARIABLES --------------------------------------- */
-/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
-/*-------------------- MEDIA QUERY (medium) --------------------------------*/
-/*-------------------- MEDIA QUERY (large) ------------------------------------*/
-/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+/*-------------------- CSS by Anthony ----------------------------------------*/
+
+/* ------------------- IMPORTED FONTS --------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+
+/*-------------------- CSS RESET ---------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} */
+
+/* HTML5 display-role reset for older browsers */
+
+/* article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} */
+
+/* ------------------- ROOT VARIABLES --------------------------------------- */
+
+:root {
+    --green: #06A816;
+    --orange: #E75D02;
+    --black: #000000;
+    --white: #ffffff;
+    --font-primary: 'Habibi', serif;
+    --font-secondary: 'Irish Grover', cursive;
+}
+
+/* ------------------- GLOBAL STYLES (mobile first/small) --------------------*/
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: var(--white);
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-secondary);
+    padding: 10px;
+}
+
+header div {
+    background-color: var(--green);
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.25em;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+nav {
+    padding: 20px 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--white);
+
+}
+
+ul .li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    background-color: var(--orange);
+    padding: 10px;
+    margin: 10px auto 10px;
+    width: 300px;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+#top-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 5px;
+    padding: 15px 10px;
+    text-align: center;
+    cursor: pointer;
+    border-color: var(--white);
+    z-index: 10;
+    }
+
+p {
+    padding: 0 20px;
+}
+
+h3 {
+    display: block;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+.sale-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 300px;
+    margin: 30px auto 30px;
+    position: relative;
+    align-items: center;
+    gap: 5px;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figure figcaption {
+    position: absolute;
+    bottom: 125px;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--green);
+}
+
+footer h2 {
+    text-align: center;
+}
+
+
+dd {
+    margin: 0 15px;
+}
+
+#copyright {
+    color: var(--green);
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+}
+
+
+/*-------------------- MEDIA QUERY (small: min-width 428px) ------------------*/ 
+/* I didn't really need this since I've done 'mobile first' design */
+@media (min-width: 428px) {
+    
+
+}
+
+
+/*-------------------- MEDIA QUERY (medium: min-width 834px) ------------------*/
+@media (min-width: 834px) {
+
+    header div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+    }
+
+    header h1 {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    header p {
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-basis: 50%;
+    }
+
+    ul .li {
+        align-content: center;
+        background-color: var(--orange);
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 300px;
+        border-radius: 5px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        color: var(--white);
+        background-color: var(--green);
+    }
+
+    dl div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer #copyright {
+        grid-column: span 2;
+        text-align: center;
+        width: 100%;
+    }
+
+    #contact h2 {
+        margin-top: -40px;
+        padding-top: 0;
+    }
+
+    .sale-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        gap: 20px;
+    }
+
+    .sale-items h3 {
+        grid-column: span 2;
+        text-align: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+
+    .sale-items figure {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+}
+
+/*-------------------- MEDIA QUERY (large: min-width 1280px) -------------------*/
+@media (min-width: 1280px) {
+    header {
+        background-color: var(--green);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header div {
+       display: flex;
+       flex-direction: column;
+    }
+
+    header p {
+        text-align: left;
+        margin-right: 20px;
+    }
+
+    ul .li {
+        margin: 10px 20px;
+        border: 4px var(--white);
+    }
+
+    .sale-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        gap: 20px;
+    }
+
+    .sale-items h3 {
+        grid-column: span 3;
+        text-align: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 100px;
+    }
+
+    #contact h2 {
+        margin-top: 0;
+    }
+
+    #hours {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 100px;
+    }
+
+    #hours h2 {
+        margin-top: 35px;
+    }
+
+}
+
+/*-------------------- MEDIA QUERY (xl: min-width 1440px) ----------------------*/
+@media (min-width: 1440px) {
+    .sale-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        gap: 20px;
+    }
+
+    .sale-items h3 {
+        grid-column: span 4;
+        text-align: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+}
