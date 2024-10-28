@@ -208,9 +208,14 @@ footer h2 {
     text-align: center;
 }
 
+dl {
+    margin: 0 20px;
+}
 
-dd {
-    margin: 0 15px;
+dl div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #copyright {
